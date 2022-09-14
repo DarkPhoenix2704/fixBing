@@ -6,15 +6,7 @@ chrome.storage.local.get(['bingFix'], (data) => {
             '.b_opalpers',
             '.scs_arw',
             '.fdbtext',
-            '.b_ad .b_adTop',
-            '.thumb_n.feedback-binded',
-            '.thumb_f2',
-            '.thumb_y.feedback-binded',
-            '.thumb_t2',
             '.b_rrsr',
-            '.sa_sgr.sa_hv',
-            '.sa_5022',
-            '.sa_5022',
             '.rs_tx',
             '.b_footnote',
             '.tdw_ttline',
@@ -37,14 +29,27 @@ chrome.storage.local.get(['bingFix'], (data) => {
             '.l_ecrd_ftr',
             '.vs',
         '.vs_cont',
-        '.b_ad',
-        '.b_adLastChild',
         '.pa_mlo .pa_carousel_mlo',
-        '.pa_sbo .pa_list_sbo',
+        '.pa_sbo',
         '.pa_sb .pa_list_sb',
+        '.paa_drw',
+        '.lite-entcard-blk .l_ecrd_bkg_bdrls',
+        '.l_ecrd_b3',
+        '.c1',
+        '.l_ecrd_c3_imgpair',
     ];
     junk.forEach((selector) => {
-        document.querySelectorAll(selector).forEach(el => el.remove());
+        $(selector).remove();
     });
+    $('div[class^="l_ecrd_a"]').remove();
+    $('div[class^="b_ad"]').remove();
+    $('div[class^="l_ecrd_c"]').remove();
+    $('div[class^="sa"]').remove();
+    $('div[id^="Primary_Quote"]').remove();
+    $('div[class^="thumb"]').remove();
+    $('div[id^="l_ecrd_blk_3_QnA"]').remove();
+    $('div[class^="l_ecrd_d3_fct"]').remove();
+    $('div[class^="l_ecrd_d3_img"]').remove();
+    $('div[class^="l_ecrd_bkg_hlt"]').remove();
 }
 });
