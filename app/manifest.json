@@ -1,0 +1,38 @@
+{
+    "name": "Fix Bing",
+    "description": "An extension to make Bing Usable",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "author": "Anbarasu <anbarasun123@gmail.com>",
+    "icons": {
+      "16": "images/icon.png",
+      "128": "images/icon.png"
+    },
+    "action": {
+      "default_icon": {
+        "19": "images/icon.png",
+        "38": "images/icon.png"
+      },
+      "default_title": "Fix Bing",
+      "default_popup": "pages/popup.html"
+    },
+    "options_page": "pages/options.html",
+    "options_ui": {
+      "page": "pages/options.html"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://*.bing.com/*"
+        ],
+        "js": [
+          "scripts/contentscript.js"
+        ]
+      }
+    ],
+    "permissions": [
+      "tabs",
+      "storage"
+    ]
+  }
+  
